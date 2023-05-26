@@ -16,6 +16,8 @@ public class NewFXMain extends Application {
         primaryStage.setTitle("Rotary Youth Driver Awareness");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
+        System.out.print("this is a test");
     }
 
     public static void main(String[] args) {
