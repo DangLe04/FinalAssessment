@@ -22,14 +22,14 @@ public class BackendApplication {
         System.out.println("Hello World!");
         databaseHelper = new DatabaseHelper();
 
-        //addDocument();
+        addDocument();
 
-        addQuiz();
+        //addQuiz();
 
 //        addSurvey();
 
-        //viewDocument(2);
-        viewQuiz(1);
+        viewDocument(1);
+        //viewQuiz(1);
 //
 //        viewSurvey(1);
 
