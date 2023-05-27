@@ -6,8 +6,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "survey")
 @NamedQueries({
-        @NamedQuery(name = "Survey.findBySurveyId", query = "select s from Survey s where s.surveyId = :surveyId"),
-        @NamedQuery(name = "Survey.findAll", query = "select s from Survey s")
+        @NamedQuery(name = "Survey.findBySurveyId", query = "select s from Survey s where s.surveyId = :surveyId")
 })
 public class Survey {
 

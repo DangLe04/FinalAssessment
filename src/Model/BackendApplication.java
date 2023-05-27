@@ -22,23 +22,17 @@ public class BackendApplication {
         System.out.println("Hello World!");
         databaseHelper = new DatabaseHelper();
 
-       // addDocument();
+        //addDocument();
 
         addQuiz();
 
 //        addSurvey();
 
         //viewDocument(2);
-
-//        viewQuiz(51);
+        viewQuiz(1);
 //
 //        viewSurvey(1);
 
-//        getDocuments();
-
-//        getQuizzes();
-
-        //getSurveys();
     }
 
     private static void login(){
@@ -144,45 +138,6 @@ public class BackendApplication {
                 System.out.println("selection " +(i+1)+": "+
                         question.getSelection().get(i));
 
-            }
-        }
-    }
-
-    private static void getDocuments(){
-        List<Document> documents = databaseHelper.getDocuments();
-
-        for (Document document : documents) {
-            System.out.println(document.getDocumentId());
-            System.out.println(document.getTitle());
-            System.out.println(document.getContent());
-        }
-    }
-
-    private static void getQuizzes(){
-        List<Quiz> quizzes = databaseHelper.getQuizzes();
-
-        for(Quiz quiz: quizzes){
-            System.out.println(quiz.getQuizID());
-            for(QuizQuestion question: quiz.getQuizQuestionList()){
-                System.out.println(question.getQuestion());
-                for (Answer answer: question.getAnswers()){
-                    System.out.println(answer.getAnswer());
-                }
-            }
-        }
-
-    }
-
-    private static void getSurveys(){
-        List<Survey> surveys = databaseHelper.getSurveys();
-
-        for(Survey survey: surveys){
-            System.out.println(survey.getTitle());
-            for(SurveyQuestion surveyQuestion: survey.getSurveyQuestionList()){
-                System.out.println(surveyQuestion.getQuestion());
-                for (String selection:surveyQuestion.getSelection()){
-                    System.out.println(selection);
-                }
             }
         }
     }

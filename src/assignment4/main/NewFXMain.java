@@ -17,7 +17,6 @@ public class NewFXMain extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
         
-        System.out.print("this is a test");
     }
 
     public static void main(String[] args) {
