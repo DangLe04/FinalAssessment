@@ -2,6 +2,7 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollBar?>
@@ -20,9 +21,9 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
    <children>
-      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="main_form" prefHeight="600.0" prefWidth="1097.0">
          <children>
-            <BorderPane layoutX="79.0" layoutY="100.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <BorderPane prefHeight="600.0" prefWidth="1111.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                <top>
                   <AnchorPane prefHeight="45.0" prefWidth="1100.0" styleClass="semi-top-form" stylesheets="@../Css/home.css" BorderPane.alignment="CENTER">
                      <children>
@@ -61,17 +62,17 @@
                                  </font>
                               </Label>
                               <Line endX="69.0" layoutX="121.0" layoutY="207.0" startX="-100.0" stroke="WHITE" />
-                              <Button fx:id="home_btn" layoutX="16.0" layoutY="207.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Home">
+                              <Button fx:id="home_btn" layoutX="16.0" layoutY="210.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Home">
                                  <graphic>
-                                    <FontAwesomeIcon glyphName="HOME" size="1.5em" />
+                                    <FontAwesomeIcon glyphName="HOME" size="2em" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="addEmployee_btn" layoutX="16.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Learning Materials">
+                              <Button fx:id="learning_btn" layoutX="16.0" layoutY="250.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Learning Materials">
                                  <graphic>
-                                    <FontAwesomeIcon glyphName="BOOK" size="1.5em" />
+                                    <FontAwesomeIcon glyphName="BOOK" size="2em" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="salary_btn" layoutX="16.0" layoutY="278.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Quizzes">
+                              <Button fx:id="quiz_btn" layoutX="16.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Quizzes">
                                  <graphic>
                                     <FontAwesomeIcon glyphName="CALCULATOR" size="1.5em" />
                                  </graphic>
@@ -90,9 +91,9 @@
                                     <Font name="System Bold" size="15.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="home_btn1" layoutX="16.0" layoutY="313.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Test">
+                              <Button fx:id="test_btn" layoutX="16.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Test">
                                  <graphic>
-                                    <FontAwesomeIcon glyphName="LAPTOP" size="1.5em" />
+                                    <FontAwesomeIcon glyphName="LAPTOP" size="2em" />
                                  </graphic>
                               </Button>
                               <Label layoutX="62.0" layoutY="172.0" text="Participant">
@@ -105,6 +106,16 @@
                                     <Font size="17.0" />
                                  </font>
                               </Label>
+                              <Button fx:id="survey_btn" layoutX="16.0" layoutY="370.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/userpageDesign.css" text="Survey">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="PENCIL" size="2em" wrappingWidth="22.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="credit_btn" layoutX="16.0" layoutY="410.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@../Css/home.css" text="Credit">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="USERS" size="2em" wrappingWidth="31.5" />
+                                 </graphic>
+                              </Button>
                            </children>
                         </AnchorPane>
                      </children>
@@ -113,9 +124,249 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="home_form" layoutX="63.0" layoutY="87.0" prefHeight="555.0" prefWidth="889.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="learning_form" prefHeight="556.0" prefWidth="899.0" visible="false">
                            <children>
-                              <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="537.0" prefWidth="870.0" stylesheets="@../Css/home.css">
+                              <AnchorPane layoutX="3.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="888.0" stylesheets="@../Css/userpageDesign.css">
+                                 <styleClass>
+                                    <String fx:value="credit-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="15.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="267.0" stylesheets="@../Css/userpageDesign.css">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="436.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css" AnchorPane.bottomAnchor="8.0">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn8" layoutX="-3.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="60.0" prefWidth="275.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="381.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn7" layoutX="28.0" layoutY="-9.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="54.0" prefWidth="278.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="320.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn6" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="53.0" prefWidth="240.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 6" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="258.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="63.0" prefWidth="250.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="192.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css" AnchorPane.bottomAnchor="255.0">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn4" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="63.0" prefWidth="250.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="131.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn3" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="63.0" prefWidth="250.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="63.0" prefWidth="250.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="53.0" prefWidth="240.0" stylesheets="@../Css/userpageDesign.css" AnchorPane.topAnchor="8.0">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="credit-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="topic_btn1" layoutX="-2.0" layoutY="-4.0" mnemonicParsing="false" onAction="#switchTopicPane" prefHeight="53.0" prefWidth="240.0" styleClass="btn" stylesheets="@../Css/userpageDesign.css" text="Topic 1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <StackPane layoutX="290.0" layoutY="-1.0" prefHeight="554.0" prefWidth="605.0">
+                                       <children>
+                                          <AnchorPane fx:id="topic_pane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 2">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 3">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 4">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 5">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 6">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane7" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 7">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0" visible="false">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 8">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                          <AnchorPane fx:id="topic_pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="580.0">
+                                             <children>
+                                                <Label layoutX="266.0" layoutY="29.0" text="Topic 1">
+                                                   <font>
+                                                      <Font name="System Bold" size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <Line endX="114.0" layoutX="290.0" layoutY="60.0" startX="-100.0" />
+                                                <TextArea layoutX="51.0" layoutY="92.0" prefHeight="385.0" prefWidth="497.0" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <StackPane.margin>
+                                                <Insets bottom="10.0" right="5.0" />
+                                             </StackPane.margin>
+                                          </AnchorPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="home_form" layoutX="63.0" layoutY="87.0" prefHeight="555.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="9.0" layoutY="8.0" prefHeight="540.0" prefWidth="870.0" stylesheets="@../Css/home.css">
                                  <styleClass>
                                     <String fx:value="white-bg" />
                                     <String fx:value="shadow" />
@@ -188,7 +439,7 @@
                               </AnchorPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="addEmployee_form" layoutX="35.0" layoutY="78.0" prefHeight="555.0" prefWidth="889.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="test_form" layoutX="35.0" layoutY="78.0" prefHeight="555.0" prefWidth="889.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="552.0" prefWidth="884.0">
                                  <children>
@@ -199,7 +450,7 @@
                               </VBox>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="salary_form" layoutX="75.0" layoutY="78.0" prefHeight="555.0" prefWidth="889.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="survey_form" layoutX="75.0" layoutY="78.0" prefHeight="555.0" prefWidth="889.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="523.0" prefWidth="283.0" stylesheets="@../Css/home.css">
                                  <styleClass>
@@ -256,6 +507,469 @@
                                           <TableColumn fx:id="salary_col_salary" prefWidth="117.0" text="Salary ($)" />
                                        </columns>
                                     </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="quiz_form" prefHeight="555.0" prefWidth="900.0" stylesheets="@../Css/userpageDesign.css" visible="false">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <StackPane prefHeight="550.0" prefWidth="900.0">
+                                 <children>
+                                    <AnchorPane fx:id="quiz_form1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css">
+                                       <children>
+                                          <Button fx:id="quiz_btn1" layoutX="682.0" layoutY="444.0" mnemonicParsing="false" onAction="#switchQuizPane" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="quiz_form2" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button fx:id="quiz_btn2" layoutX="682.0" layoutY="444.0" mnemonicParsing="false" onAction="#switchQuizPane" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 2">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button layoutX="682.0" layoutY="444.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button layoutX="682.0" layoutY="444.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button layoutX="682.0" layoutY="444.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button layoutX="682.0" layoutY="444.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button layoutX="682.0" layoutY="444.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="540.0" prefWidth="881.0" styleClass="credit-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
+                                       <children>
+                                          <Button layoutX="682.0" layoutY="444.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="385.0" layoutY="46.0" text="Question 1">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Line endX="100.0" layoutX="436.0" layoutY="76.0" startX="-100.0" />
+                                          <Button layoutX="247.0" layoutY="241.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextArea editable="false" layoutX="224.0" layoutY="97.0" prefHeight="130.0" prefWidth="424.0" text="question 1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Quiz">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="813.0" layoutY="14.0" text="1/10">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="247.0" layoutY="324.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="247.0" layoutY="365.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="D. Answer 4">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="credit_form" prefHeight="552.0" prefWidth="895.0" stylesheets="@../Css/userpageDesign.css" visible="false">
+                           <styleClass>
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="6.0" prefHeight="540.0" prefWidth="870.0" stylesheets="@../Css/userpageDesign.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="credit-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fitHeight="208.0" fitWidth="195.0" layoutX="321.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/credit.png" />
+                                       </image>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="creditpic" />
+                                       </styleClass>
+                                    </ImageView>
+                                    <Label layoutX="292.0" layoutY="225.0" text="RYDA Application Built By:">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="280.0" layoutY="287.0" text="- Tran Vinh Dang Le            12113965">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="280.0" layoutY="337.0" text="- Dimas Abiyoga Mauldy    12148875">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="280.0" layoutY="312.0" text="- Sahil Rakeshkumar Shah  12113965">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="279.0" layoutY="362.0" text="- Huu Thai Nguyen              12113965">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="207.0" layoutX="365.0" layoutY="255.0" startX="-100.0" />
                                  </children>
                               </AnchorPane>
                            </children>

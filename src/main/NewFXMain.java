@@ -1,4 +1,4 @@
-package assignment4.main;
+package main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
