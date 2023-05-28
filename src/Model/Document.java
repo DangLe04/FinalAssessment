@@ -7,9 +7,10 @@ import java.io.Serializable;
 @Entity
 @Table(name = "document")
 @NamedQueries({
-        @NamedQuery(name = "Document.findByDocumentId", query = "select d from Document d where d.documentId = :documentId")
+        @NamedQuery(name = "Document.findByDocumentId", query = "select d from Document d where d.documentId = :documentId"),
+        @NamedQuery(name = "Document.findAll", query = "select d from Document d")
 })
-public class Document{
+public class Document {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

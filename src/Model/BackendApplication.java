@@ -22,25 +22,50 @@ public class BackendApplication {
         System.out.println("Hello World!");
         databaseHelper = new DatabaseHelper();
 
-        addDocument();
+//        addDocument();
 
-        //addQuiz();
+//        addQuiz();
 
-//        addSurvey();
+       // addSurvey();
 
-        viewDocument(1);
-        //viewQuiz(1);
+        //viewDocument(2);
+
+//        viewQuiz(51);
 //
 //        viewSurvey(1);
 
+//        getDocuments();
+//
+//        getQuizzes();
+//
+//        getSurveys();
+
+        //register();
+        login();
     }
 
     private static void login(){
+        String email = "a@2";
+        String password = "123456";
 
+        boolean isSuccessful = databaseHelper.login(email, password);
+        if (isSuccessful){
+            System.out.println("Log in successfully");
+        } else System.out.println("Wrong email or password, please try again");
     }
 
     private static void register(){
+        User user = new User();
+        user.setName("John Wick");
+        user.setAccountType("customer");
+        user.setEmail("a@2");
+        user.setPassword("123456");
 
+        Boolean registrable = databaseHelper.checkUser(user.getEmail());
+        if (registrable){
+            databaseHelper.register(user);
+            System.out.println("account registered successfully");
+        }else System.out.println("The email you entered has been used in our system. Please try again!");
     }
 
     private static void addDocument(){
@@ -138,6 +163,45 @@ public class BackendApplication {
                 System.out.println("selection " +(i+1)+": "+
                         question.getSelection().get(i));
 
+            }
+        }
+    }
+
+    private static void getDocuments(){
+        List<Document> documents = databaseHelper.getDocuments();
+
+        for (Document document : documents) {
+            System.out.println(document.getDocumentId());
+            System.out.println(document.getTitle());
+            System.out.println(document.getContent());
+        }
+    }
+
+    private static void getQuizzes(){
+        List<Quiz> quizzes = databaseHelper.getQuizzes();
+
+        for(Quiz quiz: quizzes){
+            System.out.println(quiz.getQuizID());
+            for(QuizQuestion question: quiz.getQuizQuestionList()){
+                System.out.println(question.getQuestion());
+                for (Answer answer: question.getAnswers()){
+                    System.out.println(answer.getAnswer());
+                }
+            }
+        }
+
+    }
+
+    private static void getSurveys(){
+        List<Survey> surveys = databaseHelper.getSurveys();
+
+        for(Survey survey: surveys){
+            System.out.println(survey.getTitle());
+            for(SurveyQuestion surveyQuestion: survey.getSurveyQuestionList()){
+                System.out.println(surveyQuestion.getQuestion());
+                for (String selection:surveyQuestion.getSelection()){
+                    System.out.println(selection);
+                }
             }
         }
     }

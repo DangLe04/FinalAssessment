@@ -5,7 +5,12 @@ import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
-@Table(name= "user")
+@Table(name = "user")
+@NamedQueries({
+        @NamedQuery(name = "User.countByEmail", query = "select count(u) from User u where u.email = :email"),
+        @NamedQuery(name = "User.findByUserId", query = "select u from User u where u.userId = :userId"),
+        @NamedQuery(name = "User.findByEmail", query = "select u from User u where u.email = :email")
+})
 public class User implements Serializable {
 
     @Serial
