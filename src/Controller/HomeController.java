@@ -3,7 +3,11 @@ package Controller;
 
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Optional;
+import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +18,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -150,11 +155,22 @@ public class HomeController {
     private Button salary_updateBtn;
 
     @FXML
-    private Label username;
+    private Label label1;
+    
+    @FXML
+    private ComboBox comBoBox1;
     
         
     private Stage stage;
     private Scene scene;
+    
+
+    
+    
+    public void initialize(URL url, ResourceBundle rb){   
+        
+
+    }
     
 
 //   @FXML
