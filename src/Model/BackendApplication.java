@@ -22,11 +22,11 @@ public class BackendApplication {
         System.out.println("Hello World!");
         databaseHelper = new DatabaseHelper();
 
-//        addDocument();
+        addDocument();
 
-//        addQuiz();
+        addQuiz();
 
-       // addSurvey();
+        addSurvey();
 
         //viewDocument(2);
 
@@ -40,8 +40,10 @@ public class BackendApplication {
 //
 //        getSurveys();
 
-        //register();
-        login();
+//        register();
+//         login();
+
+        submitQuiz();
     }
 
     private static void login(){
@@ -204,6 +206,18 @@ public class BackendApplication {
                 }
             }
         }
+    }
+
+    private static void submitQuiz(){
+        Customer user = new Customer();
+        user.setUserId(1);
+        user.setQuizCompleted(1);
+
+        databaseHelper.submitQuiz(user);
+    }
+
+    private static void submitSurvey(){
+
     }
 
 

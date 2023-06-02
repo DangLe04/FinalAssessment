@@ -212,4 +212,12 @@ public class DatabaseHelper {
         return null;
     }
 
+    public void submitQuiz(Customer customer){
+        entityTransaction.begin();
+
+        entityManager.merge(customer);
+
+        entityTransaction.commit();
+    }
+
 }
