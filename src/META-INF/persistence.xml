@@ -9,6 +9,8 @@
     <class>Model.Survey</class>
     <class>Model.SurveyQuestion</class>
     <class>Model.User</class>
+    <class>Model.SubmittedSurvey</class>
+    <class>Model.Customer</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/new"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

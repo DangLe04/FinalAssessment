@@ -22,13 +22,13 @@ public class BackendApplication {
         System.out.println("Hello World!");
         databaseHelper = new DatabaseHelper();
 
-        addDocument();
+//        addDocument();
+//
+//        addQuiz();
+//
+//        addSurvey();
 
-        addQuiz();
-
-        addSurvey();
-
-        //viewDocument(2);
+        viewDocument(2);
 
 //        viewQuiz(51);
 //
@@ -43,7 +43,7 @@ public class BackendApplication {
 //        register();
 //         login();
 
-        submitQuiz();
+//        submitQuiz();
     }
 
     private static void login(){
