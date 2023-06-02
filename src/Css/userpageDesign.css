@@ -1,0 +1,189 @@
+/* 
+    Created on : May 24, 2023, 12:16:34 AM
+    Author     : abiyo
+*/
+
+.top-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .2px .4px;
+}
+
+.semi-top-form{
+    -fx-background-color:#efefef;
+    -fx-border-color:#000;
+    -fx-border-width:.2px .4px .8px .4px;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#ff3547;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color:#ddd;
+}
+
+.nav-form{
+    -fx-background-color:linear-gradient(to bottom right, #2193b0, #6dd5ed);
+}
+
+.nav-btn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-font-size:14px;
+    -fx-text-fill:#000;
+    -fx-alignment:CENTER-LEFT;
+}
+
+.nav-btn:hover{
+    -fx-background-color:#ddd;
+}
+
+.btn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    font-weight: bold;
+    -fx-font-size:16px;
+    -fx-text-fill:#000;
+    -fx-alignment:CENTER;
+}
+
+.btn:hover{
+    -fx-background-color:#ddd;
+}
+
+.quiznext-btn{
+    -fx-background-color:white;
+    -fx-cursor:hand;
+    font-weight: bold;
+    -fx-font-size:16px;
+    -fx-text-fill:#000;
+    -fx-alignment:CENTER;
+    padding: 14px 28px;
+/*    border: 5px black;*/
+    border-color: white;
+}
+
+.quiznext-btn:hover{
+    -fx-background-color:#ddd;
+}
+
+.answer-btn{
+    -fx-background-color:white;
+    -fx-cursor:hand;
+    font-weight: bold;
+    -fx-font-size:16px;
+    -fx-text-fill:#000;
+    -fx-alignment:center-left;
+}
+
+.answer-btn:hover{
+    -fx-background-color:#ddd;
+}
+
+.answer-btn2{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    font-weight: bold;
+    -fx-font-size:16px;
+    -fx-text-fill:#000;
+    -fx-alignment:center-left;
+}
+
+.answer-btn2:hover{
+    -fx-background-color:#ddd;
+}
+
+.user-textfield{
+    -fx-background-color: transparent;
+    pointer-events: none;
+    -fx-font-size:15px;
+    font-weight: bold;
+    -fx-text-fill:#000;
+    -fx-alignment:CENTER;
+}
+
+.logout{
+    -fx-background-color:transparent;
+    -fx-background-radius:10px;
+    -fx-cursor:hand;
+}
+
+.logout:hover{
+    -fx-background-color:#ff3547;
+}
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+}
+
+.credit-bg{
+    -fx-background-color:linear-gradient(to bottom right, #2193b0, #6dd5ed);
+    -fx-background-radius:8px;
+}
+
+.home-textarea{
+    -fx-background-color: transparent;
+    -fx-font-size:16px;
+    -fx-text-fill:#000;
+}
+.card{
+    -fx-background-color:linear-gradient(to bottom right, #2193b0, #6dd5ed);
+    -fx-background-radius:5px;
+}
+
+.card-textarea{
+    -fx-background-color: transparent;
+    -fx-font-size:13px;
+    -fx-text-fill:#000;
+}
+
+.creditpic{
+    -fx-border-radius: 25px;
+    -fx-padding: 20px;
+    -fx-image-borders: 25px;
+    -fx-padding: 20px;
+    -fx-border-width: 200px;
+/*    -fx-border-style:unset;*/
+}
+.table-view{
+    -fx-border-color:#fff;
+    -fx-border-radius:8px;
+    -fx-padding:0px;
+}
+
+.table-view .table-column{
+    -fx-alignment:CENTER;
+}
+
+.lmbutton {
+    -fx-background-color:linear-gradient(to bottom right, #2193b0, #6dd5ed);
+}
+.textfieldquizresult{
+    -fx-background-color:transparent;
+    font-weight: bold;
+    -fx-text-fill: #000;
+    -fx-font-size: 26px;
+    -fx-alignment: CENTER;
+}
+
+.textfieldquizno{
+    -fx-background-color:transparent;
+    font-weight: bold;
+    -fx-text-fill: #000;
+    -fx-font-size: 20px;
+    -fx-alignment: CENTER;
+}
