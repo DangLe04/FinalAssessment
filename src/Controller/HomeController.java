@@ -1,13 +1,9 @@
-
 package Controller;
-
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,73 +16,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class HomeController {
-    
+public class HomeController {   
         
     @FXML
-    private Button topic_btn1;
-
-    @FXML
-    private Button topic_btn2;
-
-    @FXML
-    private Button topic_btn3;
-
-    @FXML
-    private Button topic_btn4;
-
-    @FXML
-    private Button topic_btn5;
-
-    @FXML
-    private Button topic_btn6;
-
-    @FXML
-    private Button topic_btn7;
-
-    @FXML
-    private Button topic_btn8;
+    private Button topic_btn1,topic_btn2,topic_btn3,topic_btn4,topic_btn5,topic_btn6,topic_btn7,topic_btn8;
     
     @FXML
-    private AnchorPane topic_pane1;
-
-    @FXML
-    private AnchorPane topic_pane2;
-
-    @FXML
-    private AnchorPane topic_pane3;
-
-    @FXML
-    private AnchorPane topic_pane4;
-
-    @FXML
-    private AnchorPane topic_pane5;
-
-    @FXML
-    private AnchorPane topic_pane6;
-
-    @FXML
-    private AnchorPane topic_pane7;
-
-    @FXML
-    private AnchorPane topic_pane8;    
-
-    @FXML
-    private Button addEmployee_btn;
-
-    @FXML
-    private AnchorPane addEmployee_form;
-
-    @FXML
-    private Button close;
+    private AnchorPane topic_pane1,topic_pane2,topic_pane3,topic_pane4,topic_pane5,topic_pane6,topic_pane7,topic_pane8;
 
     @FXML
     private Button home_btn,learning_btn,credit_btn,quiz_btn,test_btn,survey_btn;
@@ -95,10 +36,28 @@ public class HomeController {
     private AnchorPane credit_form,quiz_form,home_form,learning_form,test_form,survey_form;
     
     @FXML
-    private Button quiz_btn1,quiz_btn2;
+    private Button quiz_btn1,quiz_btn2,quiz_btn3,quiz_btn4,quiz_btn5,quiz_btn6,quiz_btn7,quiz_btn8,quizdone_btn;    
     
     @FXML
-    private AnchorPane quiz_form1,quiz_form2;
+    private AnchorPane quiz_form1,quiz_form2,quiz_form3,quiz_form4,quiz_form5,quiz_form6,quiz_form7,quiz_form8,completed_form;
+ 
+    @FXML
+    private Button test_btn1,test_btn2,test_btn3,test_btn4,test_btn5,test_btn6,test_btn7,test_btn8,testdone_btn;
+
+    @FXML
+    private AnchorPane test_form1,test_form2,test_form3,test_form4,test_form5,test_form6,test_form7,test_form8,completedtest_form;
+    
+    @FXML
+    private Button addEmployee_btn;
+
+    @FXML
+    private AnchorPane addEmployee_form;
+
+    @FXML
+    private Button close;
+    
+    @FXML
+    private Button user_proflie;
     
     @FXML
     private Button logout;
@@ -108,94 +67,20 @@ public class HomeController {
 
     @FXML
     private Button minimize;
-
-    @FXML
-    private Button salary_btn;
-
-    @FXML
-    private Button salary_clearBtn;
-
-    @FXML
-    private TableColumn<?, ?> salary_col_employeeID;
-
-    @FXML
-    private TableColumn<?, ?> salary_col_firstName;
-
-    @FXML
-    private TableColumn<?, ?> salary_col_lastName;
-
-    @FXML
-    private TableColumn<?, ?> salary_col_position;
-
-    @FXML
-    private TableColumn<?, ?> salary_col_salary;
-
-    @FXML
-    private TextField salary_employeeID;
-
-    @FXML
-    private Label salary_firstName;
-
-    @FXML
-    private AnchorPane salary_form;
-
-    @FXML
-    private Label salary_lastName;
-
-    @FXML
-    private Label salary_position;
-
-    @FXML
-    private TextField salary_salary;
-
-    @FXML
-    private TableView<?> salary_tableView;
-
-    @FXML
-    private Button salary_updateBtn;
-
-    @FXML
-    private Label label1;
     
     @FXML
-    private ComboBox comBoBox1;
+    private Label username_lb;
     
-        
-    private Stage stage;
-    private Scene scene;
+    @FXML
+    private ComboBox comBoBox1;  
     
 
-    
     
     public void initialize(URL url, ResourceBundle rb){   
         
 
     }
-    
 
-//   @FXML
-//    public void signoutButtonClicked(ActionEvent event) throws IOException {
-//        Parent root = FXMLLoader.load(getClass().getResource("/assignment4/Login.fxml"));
-//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//    }
-
-    @FXML
-    void salaryReset(ActionEvent event) {
-
-    }
-
-    @FXML
-    void salarySelect(MouseEvent event) {
-
-    }
-
-    @FXML
-    void salaryUpdate(ActionEvent event) {
-
-    }
 
 // This is a method that place on the button to switch to every panels 
     @FXML
@@ -465,46 +350,394 @@ public class HomeController {
     void switchQuizPane(ActionEvent event) {
         
         if (event.getSource() == quiz_btn1) {
-            quiz_form1.setVisible(true);
-            quiz_form2.setVisible(false);
-//            topic_pane3.setVisible(false);
-//            topic_pane4.setVisible(false);
-//            topic_pane5.setVisible(false);
-//            topic_pane6.setVisible(false);
-//            topic_pane7.setVisible(false);
-//            topic_pane8.setVisible(false);
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(true);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
             
-            quiz_btn1.setStyle("-fx-background-color:linear-gradient(to bottom right, #3a4368, #28966c);");
-            quiz_btn2.setStyle("-fx-background-color:transparent");
-//            topic_btn3.setStyle("-fx-background-color:transparent");
-//            topic_btn4.setStyle("-fx-background-color:transparent");
-//            topic_btn5.setStyle("-fx-background-color:transparent");
-//            topic_btn6.setStyle("-fx-background-color:transparent");
-//            topic_btn7.setStyle("-fx-background-color:transparent");
-//            topic_btn8.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
 
         } 
         else if (event.getSource() == quiz_btn2) {
             quiz_form1.setVisible(false);
-            quiz_form2.setVisible(true);
-//            topic_pane3.setVisible(false);
-//            topic_pane4.setVisible(false);
-//            topic_pane5.setVisible(false);
-//            topic_pane6.setVisible(false);
-//            topic_pane7.setVisible(false);
-//            topic_pane8.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(true);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
             
-            quiz_btn2.setStyle("-fx-background-color:linear-gradient(to bottom right, #3a4368, #28966c);");
+            quiz_btn3.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
             quiz_btn1.setStyle("-fx-background-color:transparent");
-//            topic_btn3.setStyle("-fx-background-color:transparent");
-//            topic_btn4.setStyle("-fx-background-color:transparent");
-//            topic_btn5.setStyle("-fx-background-color:transparent");
-//            topic_btn6.setStyle("-fx-background-color:transparent");
-//            topic_btn7.setStyle("-fx-background-color:transparent");
-//            topic_btn8.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");            
         }
+        else if (event.getSource() == quiz_btn3) {
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(true);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
+            
+            quiz_btn4.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == quiz_btn4) {
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(true);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
+            
+            quiz_btn5.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == quiz_btn5) {
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(true);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
+            
+            quiz_btn6.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == quiz_btn6) {
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(true);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
+            
+            quiz_btn7.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == quiz_btn7) {
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(true);
+            completed_form.setVisible(false);
+            
+            quiz_btn8.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == quiz_btn8) {
+            quiz_form1.setVisible(false);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(true);
+            
+            quizdone_btn.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quiz_btn1.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == quizdone_btn) {
+            quiz_form1.setVisible(true);
+            quiz_form2.setVisible(false);
+            quiz_form3.setVisible(false);
+            quiz_form4.setVisible(false);
+            quiz_form5.setVisible(false);
+            quiz_form6.setVisible(false);
+            quiz_form7.setVisible(false);
+            quiz_form8.setVisible(false);
+            completed_form.setVisible(false);
+            
+            quiz_btn1.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn8.setStyle("-fx-background-color:transparent");
+            quiz_btn3.setStyle("-fx-background-color:transparent");
+            quiz_btn4.setStyle("-fx-background-color:transparent");
+            quiz_btn5.setStyle("-fx-background-color:transparent");
+            quiz_btn6.setStyle("-fx-background-color:transparent");
+            quiz_btn7.setStyle("-fx-background-color:transparent");
+            quiz_btn2.setStyle("-fx-background-color:transparent");
+            quizdone_btn.setStyle("-fx-background-color:transparent");
+        }            
         
     }
+// This is a method that use to switch inside the Test panel 
+    @FXML
+    void switchTestPane(ActionEvent event) {
+        
+        if (event.getSource() == test_btn1) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(true);
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn2.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+
+        } 
+        else if (event.getSource() == test_btn2) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(true);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn3.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");           
+        }
+        else if (event.getSource() == test_btn3) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(false);
+            test_form4.setVisible(true);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn4.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == test_btn4) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(true);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn5.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == test_btn5) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(true);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn6.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == test_btn6) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(true);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn7.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == test_btn7) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(true);
+            completedtest_form.setVisible(false);
+            
+            test_btn8.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == test_btn8) {
+            test_form1.setVisible(false);
+            test_form2.setVisible(false);
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(true);
+            
+            testdone_btn.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            test_btn2.setStyle("-fx-background-color:transparent");
+        }
+        else if (event.getSource() == testdone_btn) {
+            test_form1.setVisible(true);
+            test_form2.setVisible(false);   
+            test_form3.setVisible(false);
+            test_form4.setVisible(false);
+            test_form5.setVisible(false);
+            test_form6.setVisible(false);
+            test_form7.setVisible(false);
+            test_form8.setVisible(false);
+            completedtest_form.setVisible(false);
+            
+            test_btn1.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn2.setStyle("-fx-background-color:transparent");
+            test_btn3.setStyle("-fx-background-color:transparent");
+            test_btn4.setStyle("-fx-background-color:transparent");
+            test_btn5.setStyle("-fx-background-color:transparent");
+            test_btn6.setStyle("-fx-background-color:transparent");
+            test_btn7.setStyle("-fx-background-color:transparent");
+            test_btn8.setStyle("-fx-background-color:transparent");
+            testdone_btn.setStyle("-fx-background-color:transparent");
+        }            
+        
+    }    
+    
     private double x = 0;
     private double y = 0;
 // This is a method that use to Log out the Home Panel   
@@ -549,6 +782,17 @@ public class HomeController {
         }
 
     }
+    private Stage stage;
+    private Scene scene;
+    @FXML
+    public void user_profileClicked(ActionEvent event) throws IOException {        
+        Parent root = FXMLLoader.load(getClass().getResource("/assignment4/UserProfile.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
 // This is a method that use to close the application    
     public void close() {
         System.exit(0);

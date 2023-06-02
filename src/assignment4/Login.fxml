@@ -64,6 +64,7 @@
                </image>
             </ImageView>
             <Button fx:id="button2" layoutX="207.0" layoutY="353.0" mnemonicParsing="false" onAction="#signUpButtonClicked" text="Sign Up" />
+            <Button fx:id="admin_btn" layoutX="239.0" layoutY="300.0" mnemonicParsing="false" onAction="#adminButtonClicked" styleClass="login_button" stylesheets="@../Css/userpageDesign.css" text="Admin" />
          </children>
       </AnchorPane>
    </children>
