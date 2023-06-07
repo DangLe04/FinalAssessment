@@ -4,21 +4,32 @@
  */
 package Controller;
 
+
+import java.io.IOException;
+import java.net.URL;
 import java.util.Optional;
+import java.util.ResourceBundle;
+import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class AdminPageController {
 
@@ -37,12 +48,39 @@ public class AdminPageController {
     @FXML
     private Button logout;
 
-    @FXML
-    private TableView<?> quizTable;
     
     @FXML
     private AnchorPane main_form;
     
+    @FXML
+    private Button savebtn;
+    
+    JFrame f;  
+    
+    @FXML
+    public void savebtnOnClicked(ActionEvent event) throws IOException {
+//Show message
+        f=new JFrame();  
+        JOptionPane.showMessageDialog(f,"Saving Quiz Successfully ");
+
+//JOptionPane.showMessageDialog(f,"Incorrect Username or Password","Alert",JOptionPane.WARNING_MESSAGE); 
+
+    Parent root = FXMLLoader.load(getClass().getResource("/assignment4/Home.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    
+
+    public void start(Stage primaryStage) {
+        
+
+        
+    }
+    
+
     
     @FXML
     void addEmployeeInsertImage(MouseEvent event) {

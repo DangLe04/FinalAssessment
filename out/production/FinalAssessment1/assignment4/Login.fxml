@@ -38,7 +38,7 @@
             </Text>
             <HBox layoutX="71.0" layoutY="178.0" prefHeight="30.0" prefWidth="250.0">
                <children>
-                  <TextField alignment="CENTER" prefHeight="30.0" prefWidth="230.0" promptText="Username" styleClass="textfield" stylesheets="@../Css/login.css" />
+                  <TextField fx:id="email_textfield" alignment="CENTER" prefHeight="30.0" prefWidth="230.0" promptText="Username" styleClass="textfield" stylesheets="@../Css/login.css" />
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/icons8-user-48.png" />
@@ -47,7 +47,7 @@
             </HBox>
             <HBox layoutX="71.0" layoutY="216.0" prefHeight="30.0" prefWidth="250.0">
                <children>
-                  <TextField alignment="CENTER" prefHeight="30.0" prefWidth="230.0" promptText="Password" styleClass="textfield" stylesheets="@../Css/login.css" />
+                  <TextField fx:id="password_textfield" alignment="CENTER" prefHeight="30.0" prefWidth="230.0" promptText="Password" styleClass="textfield" stylesheets="@../Css/login.css" />
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/icons8-key-50.png" />
@@ -56,14 +56,17 @@
             </HBox>
             <CheckBox layoutX="71.0" layoutY="262.0" mnemonicParsing="false" text="Remmber Me !!" />
             <Hyperlink layoutX="186.0" layoutY="259.0" text="Recovery Password" />
-            <Button fx:id="login_button" layoutX="153.0" layoutY="299.0" mnemonicParsing="false" onAction="#homeButtonOnClick" styleClass="login_button" stylesheets="@../Css/login.css" text="Log In" />
-            <Label fx:id="helloLabel" layoutX="60.0" layoutY="357.0" prefHeight="17.0" prefWidth="154.0" text="Don't have an account yet?" />
+            <Button fx:id="login_button" layoutX="158.0" layoutY="300.0" mnemonicParsing="false" onAction="#LoginButtonOnClick" styleClass="left_HomeNav" stylesheets="@../Css/login.css" text="Log In">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label fx:id="helloLabel" layoutX="62.0" layoutY="357.0" prefHeight="17.0" prefWidth="154.0" text="Don't have an account yet?" />
             <ImageView fx:id="image1View" fitHeight="95.0" fitWidth="110.0" layoutX="139.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/icons8-wheel-48.png" />
                </image>
             </ImageView>
-            <Button fx:id="button2" layoutX="207.0" layoutY="353.0" mnemonicParsing="false" onAction="#signUpButtonClicked" text="Sign Up" />
+            <Button fx:id="button2" layoutX="221.0" layoutY="353.0" mnemonicParsing="false" onAction="#signUpButtonClicked" styleClass="left_HomeNav" stylesheets="@../Css/login.css" text="Sign Up" />
             <Button fx:id="admin_btn" layoutX="239.0" layoutY="300.0" mnemonicParsing="false" onAction="#adminButtonClicked" styleClass="login_button" stylesheets="@../Css/userpageDesign.css" text="Admin" />
          </children>
       </AnchorPane>

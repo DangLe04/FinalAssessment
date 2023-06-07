@@ -18,37 +18,40 @@ public class BackendApplication {
 
     private static DatabaseHelper databaseHelper;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public BackendApplication(){
         databaseHelper = new DatabaseHelper();
-
-        addDocument();
-
-        addQuiz();
-
-        addSurvey();
-
-        //viewDocument(2);
-
-//        viewQuiz(51);
-//
-//        viewSurvey(1);
-
-//        getDocuments();
-//
-//        getQuizzes();
-//
-//        getSurveys();
-
-//        register();
-//         login();
-
-        submitQuiz();
     }
 
-    private static void login(){
-        String email = "a@2";
-        String password = "123456";
+//    public static void main(String[] args) {
+//        System.out.println("Hello World!");
+//        databaseHelper = new DatabaseHelper();
+//
+//        //addDocument();
+//
+//       // addQuiz();
+//
+//        //addSurvey();
+//
+//        //viewDocument(2);
+//
+////        viewQuiz(51);
+////
+////        viewSurvey(1);
+//
+////        getDocuments();
+////
+////        getQuizzes();
+////
+////        getSurveys();
+//
+////        register();
+//        // login();
+//        //submitQuiz();
+//    }
+
+    public void login(String email, String password){
+//        String email = "a@2";
+//        String password = "123456";
 
         boolean isSuccessful = databaseHelper.login(email, password);
         if (isSuccessful){

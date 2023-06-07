@@ -74,12 +74,24 @@ public class HomeController {
     @FXML
     private ComboBox comBoBox1;  
     
-
+    @FXML
+    private ComboBox<?> survey1;
     
-    public void initialize(URL url, ResourceBundle rb){   
-        
 
+    public void initialize(URL url, ResourceBundle rb){ 
+    
     }
+    
+//    private  String[] listGender = {"1", "2", "3"};
+
+//    public void addEmployeeGendernList() {
+//        List<String> listG = new ArrayList<>();
+//
+//        listG.addAll(Arrays.asList(listGender));
+//
+//        ObservableList listData = FXCollections.observableArrayList(listG);
+//        survey1.setItems(listData);
+//    }
 
 
 // This is a method that place on the button to switch to every panels 
@@ -360,7 +372,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn2.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn2.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -382,7 +394,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn3.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn3.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn2.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -403,7 +415,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn4.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn4.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn2.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
@@ -424,7 +436,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn5.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn5.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn2.setStyle("-fx-background-color:transparent");
@@ -445,7 +457,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn6.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn6.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -466,7 +478,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn7.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn7.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -487,7 +499,7 @@ public class HomeController {
             quiz_form8.setVisible(true);
             completed_form.setVisible(false);
             
-            quiz_btn8.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn8.setStyle("-fx-background-color:black;");
             quiz_btn1.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -508,7 +520,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(true);
             
-            quizdone_btn.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quizdone_btn.setStyle("-fx-background-color:black;");
             quiz_btn8.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -529,7 +541,7 @@ public class HomeController {
             quiz_form8.setVisible(false);
             completed_form.setVisible(false);
             
-            quiz_btn1.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            quiz_btn1.setStyle("-fx-background-color:black;");
             quiz_btn8.setStyle("-fx-background-color:transparent");
             quiz_btn3.setStyle("-fx-background-color:transparent");
             quiz_btn4.setStyle("-fx-background-color:transparent");
@@ -556,7 +568,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn2.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn2.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -578,7 +590,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn3.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn3.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn2.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -599,7 +611,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn4.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn4.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn2.setStyle("-fx-background-color:transparent");
@@ -620,7 +632,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn5.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn5.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -641,7 +653,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn6.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn6.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -662,7 +674,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn7.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn7.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -683,7 +695,7 @@ public class HomeController {
             test_form8.setVisible(true);
             completedtest_form.setVisible(false);
             
-            test_btn8.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn8.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -704,7 +716,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(true);
             
-            testdone_btn.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            testdone_btn.setStyle("-fx-background-color:black;");
             test_btn1.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -725,7 +737,7 @@ public class HomeController {
             test_form8.setVisible(false);
             completedtest_form.setVisible(false);
             
-            test_btn1.setStyle("-fx-background-color:linear-gradient(to bottom right, #1c92d2, #f2fcfe);");
+            test_btn1.setStyle("-fx-background-color:black;");
             test_btn2.setStyle("-fx-background-color:transparent");
             test_btn3.setStyle("-fx-background-color:transparent");
             test_btn4.setStyle("-fx-background-color:transparent");
@@ -802,5 +814,6 @@ public class HomeController {
         Stage stage = (Stage) main_form.getScene().getWindow();
         stage.setIconified(true);
     }
+
 
 }
