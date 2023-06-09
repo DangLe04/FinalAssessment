@@ -22,10 +22,7 @@ public class LoginController {
     private Button admin_btn,login_button;
 
     @FXML
-    private Button button1;
-    
-    @FXML
-    private Button button2;
+    private Button signup_button;
 
     @FXML
     private Label helloLabel;
@@ -42,7 +39,7 @@ public class LoginController {
     JFrame f;
     // This is a log in button
     @FXML
-    public void LoginButtonOnClick(ActionEvent event) throws IOException {
+    public void loginButtonOnClick(ActionEvent event) throws IOException {
 //Show message
 //        f=new JFrame();
 //        JOptionPane.showMessageDialog(f,"Logged In Successfully ");
@@ -55,6 +52,7 @@ public class LoginController {
         String email = email_textfield.getText();
         String password = password_textfield.getText();
         backendApplication.login(email,password);
+
 
 //        Parent root = FXMLLoader.load(getClass().getResource("/assignment4/Home.fxml"));
 //        stage = (Stage)((Node)event.getSource()).getScene().getWindow();

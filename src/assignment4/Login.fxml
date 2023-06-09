@@ -56,7 +56,7 @@
             </HBox>
             <CheckBox layoutX="71.0" layoutY="262.0" mnemonicParsing="false" text="Remmber Me !!" />
             <Hyperlink layoutX="186.0" layoutY="259.0" text="Recovery Password" />
-            <Button fx:id="login_button" layoutX="158.0" layoutY="300.0" mnemonicParsing="false" onAction="#LoginButtonOnClick" styleClass="left_HomeNav" stylesheets="@../Css/login.css" text="Log In">
+            <Button fx:id="login_button" layoutX="158.0" layoutY="300.0" mnemonicParsing="false" onAction="#loginButtonOnClick" styleClass="left_HomeNav" stylesheets="@../Css/login.css" text="Log In">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -66,7 +66,7 @@
                   <Image url="@../image/icons8-wheel-48.png" />
                </image>
             </ImageView>
-            <Button fx:id="button2" layoutX="221.0" layoutY="353.0" mnemonicParsing="false" onAction="#signUpButtonClicked" styleClass="left_HomeNav" stylesheets="@../Css/login.css" text="Sign Up" />
+            <Button fx:id="signup_button" layoutX="221.0" layoutY="353.0" mnemonicParsing="false" onAction="#signUpButtonClicked" styleClass="left_HomeNav" stylesheets="@../Css/login.css" text="Sign Up" />
             <Button fx:id="admin_btn" layoutX="239.0" layoutY="300.0" mnemonicParsing="false" onAction="#adminButtonClicked" styleClass="login_button" stylesheets="@../Css/userpageDesign.css" text="Admin" />
          </children>
       </AnchorPane>

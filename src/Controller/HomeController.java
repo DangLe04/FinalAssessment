@@ -46,9 +46,15 @@ public class HomeController {
 
     @FXML
     private AnchorPane test_form1,test_form2,test_form3,test_form4,test_form5,test_form6,test_form7,test_form8,completedtest_form;
-    
+
     @FXML
-    private Button addEmployee_btn;
+    private Button testanswer_btn1,testanswer_btn2,testanswer_btn3;
+
+    @FXML
+    private Label test_label;
+
+    @FXML
+    private Button userroflie_button;
 
     @FXML
     private AnchorPane addEmployee_form;

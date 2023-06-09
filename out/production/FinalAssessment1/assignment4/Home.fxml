@@ -99,7 +99,7 @@
                                     <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="2em" wrappingWidth="31.5" />
                                  </graphic>
                               </Button>
-                              <Button fx:id="user_proflie" layoutX="52.0" layoutY="14.0" mnemonicParsing="false" onAction="#user_profileClicked" prefHeight="108.0" prefWidth="99.0" styleClass="nav-btn" stylesheets="@../Css/userpageDesign.css">
+                              <Button fx:id="userproflie_button" layoutX="52.0" layoutY="14.0" mnemonicParsing="false" onAction="#user_profileClicked" prefHeight="108.0" prefWidth="99.0" styleClass="nav-btn" stylesheets="@../Css/userpageDesign.css">
                                  <graphic>
                                     <FontAwesomeIcon fill="WHITE" glyphName="USER" size="7em" wrappingWidth="81.5" />
                                  </graphic>
@@ -112,7 +112,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="learning_form" prefHeight="556.0" prefWidth="899.0" stylesheets="@../Css/userpageDesign.css">
+                        <AnchorPane fx:id="learning_form" prefHeight="556.0" prefWidth="899.0" stylesheets="@../Css/userpageDesign.css" visible="false">
                            <children>
                               <AnchorPane layoutX="3.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="888.0" styleClass="shadow" stylesheets="@../Css/userpageDesign.css">
                                  <children>
@@ -469,7 +469,7 @@
                               <String fx:value="white-bg" />
                            </styleClass>
                         </AnchorPane>
-                        <AnchorPane fx:id="test_form" layoutX="35.0" layoutY="78.0" prefHeight="550.0" prefWidth="900.0" stylesheets="@../Css/userpageDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="test_form" layoutX="35.0" layoutY="78.0" prefHeight="550.0" prefWidth="900.0" stylesheets="@../Css/userpageDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <StackPane prefHeight="550.0" prefWidth="900.0" styleClass="shadow">
                                  <children>
@@ -807,7 +807,7 @@
                                           <String fx:value="credit-bg" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <AnchorPane fx:id="test_form1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="537.0" prefWidth="874.0" styleClass="white-bg" stylesheets="@../Css/userpageDesign.css">
+                                    <AnchorPane fx:id="test_form1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="537.0" prefWidth="874.0" styleClass="white-bg" stylesheets="@../Css/userpageDesign.css" visible="false">
                                        <children>
                                           <Button fx:id="test_btn1" layoutX="682.0" layoutY="444.0" mnemonicParsing="false" onAction="#switchTestPane" prefHeight="44.0" prefWidth="140.0" styleClass="quiznext1-btn" stylesheets="@../Css/userpageDesign.css" text="Next Question">
                                              <font>
@@ -820,12 +820,12 @@
                                              </font>
                                           </Label>
                                           <Line endX="100.0" layoutX="112.0" layoutY="52.0" startX="-100.0" />
-                                          <Button layoutX="58.0" layoutY="289.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
+                                          <Button fx:id="testanswer_btn1" layoutX="58.0" layoutY="289.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="A. Answer 1">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="58.0" layoutY="331.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
+                                          <Button fx:id="testanswer_btn2" layoutX="58.0" layoutY="331.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="B. Answer 2">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -840,7 +840,7 @@
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Button layoutX="58.0" layoutY="372.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
+                                          <Button fx:id="testanswer_btn3" layoutX="58.0" layoutY="372.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="378.0" styleClass="answer-btn" stylesheets="@../Css/userpageDesign.css" text="C. Answer 3">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -850,7 +850,7 @@
                                                 <Image url="@../image/cg010-left-turn.jpg" />
                                              </image>
                                           </ImageView>
-                                          <Label layoutX="58.0" layoutY="127.0" prefHeight="142.0" prefWidth="333.0" styleClass="top-form" stylesheets="@../Css/userpageDesign.css" text="Label" />
+                                          <Label fx:id="test_label" layoutX="58.0" layoutY="127.0" prefHeight="142.0" prefWidth="333.0" styleClass="top-form" stylesheets="@../Css/userpageDesign.css" text="Label" />
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -918,7 +918,7 @@
                               <String fx:value="white-bg" />
                            </styleClass>
                         </AnchorPane>
-                        <AnchorPane fx:id="quiz_form" prefHeight="550.0" prefWidth="900.0" stylesheets="@../Css/userpageDesign.css" visible="false">
+                        <AnchorPane fx:id="quiz_form" prefHeight="550.0" prefWidth="900.0" stylesheets="@../Css/userpageDesign.css">
                            <styleClass>
                               <String fx:value="white-bg" />
                               <String fx:value="shadow" />
